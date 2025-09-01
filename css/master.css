@@ -1,39 +1,43 @@
-.Shape-one {
-    display: inline;
-    background-color: rgba(193, 189, 189, 0.704);
-    border: red 3px solid;
-    outline: black solid 2px;
-    margin: 5px;
+.parent .child .title {
+    color: red;
 }
 
-.Shape-two {
-    display: inline;
-    background-color: rgba(193, 189, 189, 0.704);
-    border-left: blue solid 3px;
-    border-right: blue solid 3px;
-    border-top: green solid 3px;
-    border-bottom: green solid 3px;
-    outline: black solid 2px;
-
+.parent .title {
+    color: rgb(34, 0, 255);
 }
 
-.Shape-three {
-    display: inline;
-    background-color: rgba(255, 255, 255, 0.704);
-    border-left: blue dashed 3px;
-    border-right: blue dashed 3px;
-    border-top: green dashed 3px;
-    border-bottom: green dashed 3px;
-    outline: black solid 2px;
-    margin: 5px;
+.parent p {
+    color: rgb(111, 255, 0);
 }
 
-.element {
-    margin-top: 20px;
+.title {
+    color: rgb(111, 255, 0);
+}
+
+
+
+.title-one {
+    background-color: red;
+    width: 67px;
+    margin: 10px;
+}
+
+.title-two {
+    background-color: red;
+    width: 170px;
+    margin: 10px;
+}
+
+.title-three {
+    background-color: red;
+    width: 190px;
+    margin: 10px;
+}
+
+.title-four {
+    background-color: red;
     width: 400px;
-    padding: 6px;
-    margin-left: 10px;
-    border-left: rgb(0, 98, 255) solid 4px;
-    background-color: rgba(174, 160, 160, 0.659);
-    outline: rgba(174, 160, 160, 0.659) solid 9px;
+    height: 80px;
+    overflow: hidden;
+    /* overflow-y: hidden; */
 }
