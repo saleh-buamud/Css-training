@@ -1,43 +1,13 @@
-.parent .child .title {
-    color: red;
+div {
+    border: red solid 1px;
+    padding: 10px;
+    text-align: center;
+    width: 200px;
+    margin: 10px auto;
 }
 
-.parent .title {
-    color: rgb(34, 0, 255);
-}
-
-.parent p {
-    color: rgb(111, 255, 0);
-}
-
-.title {
-    color: rgb(111, 255, 0);
-}
-
-
-
-.title-one {
-    background-color: red;
-    width: 67px;
-    margin: 10px;
-}
-
-.title-two {
-    background-color: red;
-    width: 170px;
-    margin: 10px;
-}
-
-.title-three {
-    background-color: red;
-    width: 190px;
-    margin: 10px;
-}
-
-.title-four {
-    background-color: red;
-    width: 400px;
-    height: 80px;
-    overflow: hidden;
-    /* overflow-y: hidden; */
+div p {
+    border: inherit;
+    padding: inherit;
+    background-color: #b09999;
 }
