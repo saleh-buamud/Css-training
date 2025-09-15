@@ -1,13 +1,76 @@
+/* Main container styling */
 div {
-    border: red solid 1px;
+    background-color: #eee;
+    width: 400px;
     padding: 10px;
+    margin: 40px auto 0 auto;
+    /* Center horizontally, add top margin */
+    height: 190px;
+    border: 1px solid;
+    border-bottom: 3px solid rgb(255, 0, 13);
+    /* Red bottom border */
+    border-top: 3px solid rgb(255, 0, 13);
+    /* Red top border */
+    border-left: 3px solid rgba(0, 0, 255, 0.691);
+    /* Blue left border */
+    border-right: 3px solid rgba(0, 0, 255, 0.691);
+    /* Blue right border */
     text-align: center;
-    width: 200px;
-    margin: 10px auto;
+    font-size: 19px;
+    font-family: sans-serif;
+    position: relative;
+    left: 1%;
+    top: 20px;
+    /* Offset from left */
 }
 
-div p {
-    border: inherit;
-    padding: inherit;
-    background-color: #b09999;
+/* Top-left label styling */
+div .top-left {
+    border-top: 1px solid rgba(0, 0, 255, 0.691);
+    border-right: 3px solid rgb(255, 0, 13);
+    border-left: 1px solid rgba(0, 0, 255, 0.691);
+    width: 29px;
+    background-color: rgba(0, 0, 255, 0.691);
+    color: white;
+    position: absolute;
+    top: -14px;
+    left: -16px;
+}
+
+/* Top-right label styling */
+div .top-right {
+    border-top: 1px solid rgba(0, 0, 255, 0.691);
+    border-right: 3px solid rgba(0, 0, 255, 0.691);
+    border-left: 3px solid rgb(255, 0, 13);
+    width: 29px;
+    background-color: rgba(0, 0, 255, 0.691);
+    color: white;
+    position: absolute;
+    bottom: -12px;
+    right: -16px;
+}
+
+/* Bottom-left label styling */
+div .bottom-left {
+    border-top: 1px solid rgba(0, 0, 255, 0.691);
+    border-right: 3px solid rgba(0, 0, 255, 0.691);
+    border-left: 3px solid rgb(255, 0, 13);
+    width: 29px;
+    background-color: rgba(0, 0, 255, 0.691);
+    color: white;
+    position: absolute;
+    top: -14px;
+    right: -16px;
+}
+
+/* Bottom-right label styling */
+div .bottom-right {
+    border-left: 3px solid rgba(0, 0, 255, 0.691);
+    border-right: 3px solid rgb(255, 0, 13);
+    width: 29px;
+    background-color: rgba(0, 0, 255, 0.691);
+    color: white;
+    position: absolute;
+    bottom: -12px;
+    left: -16px;
 }
