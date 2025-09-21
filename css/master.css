@@ -1,76 +1,104 @@
-/* Main container styling */
-div {
-    background-color: #eee;
-    width: 400px;
-    padding: 10px;
-    margin: 40px auto 0 auto;
-    /* Center horizontally, add top margin */
-    height: 190px;
-    border: 1px solid;
-    border-bottom: 3px solid rgb(255, 0, 13);
-    /* Red bottom border */
-    border-top: 3px solid rgb(255, 0, 13);
-    /* Red top border */
-    border-left: 3px solid rgba(0, 0, 255, 0.691);
-    /* Blue left border */
-    border-right: 3px solid rgba(0, 0, 255, 0.691);
-    /* Blue right border */
+/* -------------------- TASK 1 -------------------- */
+.task1 {
+    width: 302px;
+    height: 44px;
+    margin: 13px auto 0;
+    padding-top: 10px;
+    background-color: #ececec;
     text-align: center;
-    font-size: 19px;
-    font-family: sans-serif;
     position: relative;
-    left: 1%;
-    top: 20px;
-    /* Offset from left */
 }
 
-/* Top-left label styling */
-div .top-left {
-    border-top: 1px solid rgba(0, 0, 255, 0.691);
-    border-right: 3px solid rgb(255, 0, 13);
-    border-left: 1px solid rgba(0, 0, 255, 0.691);
-    width: 29px;
-    background-color: rgba(0, 0, 255, 0.691);
-    color: white;
-    position: absolute;
-    top: -14px;
-    left: -16px;
+.task1:empty {
+    background-color: #ff0000;
 }
 
-/* Top-right label styling */
-div .top-right {
-    border-top: 1px solid rgba(0, 0, 255, 0.691);
-    border-right: 3px solid rgba(0, 0, 255, 0.691);
-    border-left: 3px solid rgb(255, 0, 13);
-    width: 29px;
-    background-color: rgba(0, 0, 255, 0.691);
+.task1::first-letter {
     color: white;
+    background-color: red;
+    border: 2px solid red;
+    padding: 3px;
     position: absolute;
-    bottom: -12px;
-    right: -16px;
+    margin-left: -11px;
+    margin-top: -3px;
 }
 
-/* Bottom-left label styling */
-div .bottom-left {
-    border-top: 1px solid rgba(0, 0, 255, 0.691);
-    border-right: 3px solid rgba(0, 0, 255, 0.691);
-    border-left: 3px solid rgb(255, 0, 13);
-    width: 29px;
-    background-color: rgba(0, 0, 255, 0.691);
-    color: white;
-    position: absolute;
-    top: -14px;
-    right: -16px;
+/* -------------------- TASK 2 -------------------- */
+.task2 {
+    width: 296px;
+    height: 50px;
+    margin: 13px auto 0;
+    background-color: #ececec;
+    text-align: center;
+    line-height: 50px;
+    /* لتمركز النص عمودياً */
 }
 
-/* Bottom-right label styling */
-div .bottom-right {
-    border-left: 3px solid rgba(0, 0, 255, 0.691);
-    border-right: 3px solid rgb(255, 0, 13);
-    width: 29px;
-    background-color: rgba(0, 0, 255, 0.691);
-    color: white;
+/* -------------------- TASK 3 -------------------- */
+.task3 {
+    position: relative;
+    margin: 10px auto;
+    padding: 10px;
+    background-color: #ececec;
+}
+
+.task3::before {
+    content: attr(data-person);
+    color: #000;
     position: absolute;
-    bottom: -12px;
-    left: -16px;
+    right: 106%;
+    top: 3%;
+    background-color: #ececec;
+    padding: 7px;
+    width: 77px;
+    text-align: center;
+    display: inline-block;
+}
+
+.task3::after {
+    content: "";
+    position: absolute;
+    right: 100%;
+    top: 0;
+    width: 2px;
+    height: 100%;
+    background: #000;
+    border: 2px solid red;
+}
+
+/* -------------------- TASK 4 -------------------- */
+.task4 {
+    width: 354px;
+    height: 36px;
+    margin: 7px auto 0;
+    padding-top: 5px;
+    background-color: #ececec;
+    text-align: center;
+    position: relative;
+    counter-increment: counter;
+}
+
+.task4::before {
+    content: counter(counter);
+    position: absolute;
+    right: 91%;
+    top: -1%;
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    width: 45px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.task4::after {
+    content: "";
+    background-color: red;
+    height: 100%;
+    width: 4px;
+    position: absolute;
+    top: 0;
+    left: 100%;
 }
