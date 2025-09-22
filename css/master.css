@@ -1,140 +1,143 @@
 /* div {
-    background-color: #eee;
-    width: 400px;
-    padding: 10px;
-    margin: 40px auto 0 auto;
-    height: 190px;
-    border: 1px solid;
-    border-bottom: 3px solid rgb(255, 0, 13);
-    border-top: 3px solid rgb(255, 0, 13);
-    border-left: 3px solid rgba(0, 0, 255, 0.691);
-    border-right: 3px solid rgba(0, 0, 255, 0.691);
-    text-align: center;
-    font-size: 19px;
-    font-family: sans-serif;
-    position: relative;
-    left: 1%;
-    top: 20px;
-}
-
-div .top-left {
-    border-top: 1px solid rgba(0, 0, 255, 0.691);
-    border-right: 3px solid rgb(255, 0, 13);
-    border-left: 1px solid rgba(0, 0, 255, 0.691);
-    width: 29px;
-    background-color: rgba(0, 0, 255, 0.691);
-    color: white;
-    position: absolute;
-    top: -14px;
-    left: -16px;
-}
-
-div .top-right {
-    border-top: 1px solid rgba(0, 0, 255, 0.691);
-    border-right: 3px solid rgba(0, 0, 255, 0.691);
-    border-left: 3px solid rgb(255, 0, 13);
-    width: 29px;
-    background-color: rgba(0, 0, 255, 0.691);
-    color: white;
-    position: absolute;
-    bottom: -12px;
-    right: -16px;
-}
-
-div .bottom-left {
-    border-top: 1px solid rgba(0, 0, 255, 0.691);
-    border-right: 3px solid rgba(0, 0, 255, 0.691);
-    border-left: 3px solid rgb(255, 0, 13);
-    width: 29px;
-    background-color: rgba(0, 0, 255, 0.691);
-    color: white;
-    position: absolute;
-    top: -14px;
-    right: -16px;
-}
-
-div .bottom-right {
-    border-left: 3px solid rgba(0, 0, 255, 0.691);
-    border-right: 3px solid rgb(255, 0, 13);
-    width: 29px;
-    background-color: rgba(0, 0, 255, 0.691);
-    color: white;
-    position: absolute;
-    bottom: -12px;
-    left: -16px;
-} */
-/* div {
-    width: 296px;
-    height: 50px;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: #ececec;
-    text-align: center;
-    margin-top: 13px;
-}
-
-div:empty {
-    background: #ff0000;
-} */
-/* div {
-    width: 302px;
-    height: 44px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-top: 10px;
-    background-color: #ececec;
-    text-align: center;
-    margin-top: 13px;
-    position: relative;
-}
-
-div::first-letter {
-    color: white;
-    background-color: red;
-    border: 2px solid red;
-    padding: 3px;
-    position: absolute;
-    float: left;
-    margin-left: -11px;
-    margin-top: -3px;
-
-} */
-
-p {
-    width: 355px;
-    height: 42px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-top: 10px;
-    background-color: #ececec;
-    text-align: center;
-    margin-top: 13px;
-    position: relative;
-    border-left: 2px solid red;
-}
-
-p::before {
-    content: attr(data-person);
-    color: #000000;
-    position: absolute;
-    right: 106%;
-    top: 3%;
-    background-color: #ececec;
-    padding: 7px;
-    width: 77px;
-    text-align: center;
+    margin-top: 20px;
+    margin-left: 70px;
+    width: 100px;
+    height: 100px;
+    background-color: #7f7575b9;
+    border: 1px solid black;
+    border-radius: 50%;
     display: inline-block;
+    counter-increment: I;
+    position: relative;
+    box-shadow: -8px -8px 0px rgba(255, 0, 0, 0.7), 10px 10px 0px rgba(0, 30, 255, 0.7);
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    -webkit-box-shadow: -8px -8px 0px rgba(255, 0, 0, 0.7), 10px 10px 0px rgba(0, 30, 255, 0.7);
+    -moz-box-shadow: -8px -8px 0px rgba(255, 0, 0, 0.7), 10px 10px 0px rgba(0, 30, 255, 0.7);
 }
 
-p::after {
-    content: "";
-    position: absolute;
-    right: 100%;
-    top: 12px;
-    height: 17px;
-    width: 11px;
-    border-width: 10px;
-    border-style: solid;
-    border-color: transparent red transparent transparent;
 
+
+div::before {
+    content: counter(I);
+    background-color: rgb(0, 0, 0);
+    width: 25px;
+    height: 25px;
+    color: white;
+    border-radius: 50%;
+    padding: 2px;
+    position: absolute;
+    text-align: center;
+    left: 34px;
+    top: -13px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+} */
+
+/* Container holding all cards, using flex layout for horizontal alignment */
+.container {
+    width: 550px;
+    height: 100px;
+    display: flex;
+}
+
+/* Individual card styling */
+.card {
+    background-color: #e1d9d9be;
+    /* semi-transparent background */
+    height: 170px;
+    width: 140px;
+    margin: 10px;
+    position: relative;
+    /* necessary for absolute positioning of pseudo-elements */
+}
+
+/* Common styles for buttons inside the card (basic & Product) */
+.card .basic,
+.card .Product {
+    text-align: center;
+    /* horizontally center the text */
+    background-color: #2196F3;
+    /* blue button background */
+    color: #ffffff;
+    /* white text */
+    width: 116px;
+    /* fixed width */
+    margin: 10px auto 0 auto;
+    /* center horizontally, with top margin */
+    border-radius: 3px;
+    /* slightly rounded corners */
+}
+
+/* Circular elements inside the card (free & do) */
+.card .free,
+.card .do {
+    width: 100px;
+    /* width of the circle */
+    height: 100px;
+    /* height of the circle */
+    background-color: #9c8f8fda;
+    /* semi-transparent background */
+    border-radius: 50%;
+    /* makes it circular */
+    text-align: center;
+    /* horizontally center text */
+    line-height: 100px;
+    /* vertically center single-line text */
+    font-weight: bold;
+    /* bold text */
+    margin: 13px auto 0 auto;
+    /* top margin and horizontal centering */
+}
+
+/* Pseudo-element after the first card for "or" circle */
+.saleh::after {
+    content: "or";
+    /* text inside the circle */
+    background-color: #2196F3;
+    /* blue background */
+    position: absolute;
+    /* positioned relative to .saleh card */
+    top: 70px;
+    /* vertical placement */
+    right: -18px;
+    /* horizontal placement outside the card */
+    border-radius: 50%;
+    /* circular shape */
+    padding: 1px;
+    /* small padding */
+    height: 17px;
+    /* height of circle */
+    width: 17px;
+    /* width of circle */
+    font-size: 11px;
+    /* text size */
+    line-height: 13px;
+    /* vertically center the text */
+    text-align: center;
+    /* horizontally center the text */
+}
+
+/* Pseudo-element before the first card to create vertical line */
+.saleh::before {
+    content: "";
+    /* no text, just a line */
+    position: absolute;
+    /* positioned relative to .saleh card */
+    top: 0;
+    /* start at top of card */
+    bottom: 0;
+    /* end at bottom of card */
+    left: 107%;
+    /* horizontal placement outside the card */
+    transform: translateX(-50%);
+    /* adjust horizontal alignment */
+    width: 1px;
+    /* line thickness */
+    background-color: #2196F3;
+    /* line color matching the circle */
 }
