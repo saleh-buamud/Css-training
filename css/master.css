@@ -1,3 +1,6 @@
+/* =========================
+   Section 1: Parent / Child
+========================= */
 .parent .child .title {
     color: red;
 }
@@ -14,8 +17,9 @@
     color: rgb(111, 255, 0);
 }
 
-
-
+/* =========================
+   Section 2: Titles
+========================= */
 .title-one {
     background-color: red;
     width: 67px;
@@ -39,5 +43,78 @@
     width: 400px;
     height: 80px;
     overflow: hidden;
-    /* overflow-y: hidden; */
+}
+
+/* =========================
+   Section 3: Container Hover
+========================= */
+.container {
+    background-color: #eee;
+    width: 300px;
+    margin: 0 auto;
+    text-align: center;
+    height: 102px;
+    transition: margin-top 0.6s ease 2s;
+}
+
+.container:hover {
+    margin-top: 30px;
+}
+
+.container .move-down-delay {
+    background-color: #c9bbbbed;
+    width: 234px;
+    height: 30px;
+    margin: 10px auto;
+    padding: 3px;
+    transition: margin-top 0.6s ease 1s;
+}
+
+.move-down-delay:hover {
+    margin-top: 30px;
+}
+
+/* =========================
+   Section 4: Replace Text
+========================= */
+.replace-text {
+    position: relative;
+    color: transparent;
+    background-color: #eee;
+    border: 1px solid blue;
+    text-align: center;
+    font-size: 30px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+.replace-text::after {
+    content: attr(data-text);
+    color: black;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.replace-text::before {
+    content: "SALEH";
+    color: red;
+    display: block;
+}
+
+/* =========================
+   Section 5: CSS Variables
+========================= */
+:root {
+    --mainColor: #009688;
+    --mainPadding: 10px;
+}
+
+.var-box {
+    background-color: var(--mainColor, #ffffff);
+    border: 3px solid black;
+    color: red;
+    margin: 10px;
+    padding: var(--mainPadding, 10px);
 }
